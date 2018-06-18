@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-# Fix permissions issues
+# Fix permission issues
 
 ```sh
 

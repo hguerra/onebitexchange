@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Fix permissions issues
+
+```sh
+
+sudo chown -R $USER:$USER OneBitExChange
+
+```

@@ -19,10 +19,13 @@
         font-weight: 700;
       }
 
-      .btn-exchange{
-        background-color: #5bc0de;
-        border-color: #5bc0de;
-        border-radius: 0;
+      #btn_invert{
+        border:0;
+        background:transparent;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
       }
     }
   }

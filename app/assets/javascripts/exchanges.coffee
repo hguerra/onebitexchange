@@ -8,6 +8,8 @@ $(document).ready ->
   $result = $('#result')
   $amount = $('#amount')
 
+  $btn_invert = $('#btn_invert')
+
   $amount.keyup ->
     window.clearTimeout timer
 
@@ -29,3 +31,10 @@ $(document).ready ->
 
       return false;
     ), delay)
+
+  $btn_invert.click ->
+    source = $source_currency.val()
+    target = $target_currency.val()
+
+    $source_currency.val(target)
+    $target_currency.val(source)

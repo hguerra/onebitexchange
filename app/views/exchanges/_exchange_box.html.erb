@@ -6,21 +6,26 @@
     </div>
 
     <div class='card-block'>
-      <div class='local_currency'>
+      <div class='select_area'>
           <div class='form-group'>
             <p class='title'>Moeda Local</p>
             <%= select_tag 'source_currency', options_for_select(currency_list, 'BRL'), class: 'form-control', id: 'source_currency' %>
           </div>
 
-          <div class='form-group'>
-            <input type='number' name='amount' id='amount' class='form-control' placeholder='Quantidade ($10)' step='any' required>
+          <button type="button" id="btn_invert">
+            <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjY3Ljk5OCwxMjUuNjcxTDE3Ny45OTcsNS42NjljLTUuNjU0LTcuNTU5LTE4LjM0LTcuNTU5LTIzLjk5NCwwTDY0LjAwMiwxMjUuNjcxICAgIGMtNy4zOTksOS44NDQtMC4zNTUsMjMuOTk0LDExLjk5NywyMy45OTRoNDUuMDAxdjI4NS4wMDNjMCw4LjI5MSw2LjcwOSwxNSwxNSwxNUgxOTZjOC4yOTEsMCwxNC44LTYuNzA5LDE0LjgtMTVWMTQ5LjY2NWg0NS4yICAgIEMyNjguMzYzLDE0OS42NjUsMjc1LjM4OSwxMzUuNTA1LDI2Ny45OTgsMTI1LjY3MXoiIGZpbGw9IiNlODczMGMiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik00MzYuMDAzLDM2Mi4wMDVoLTQ1LjIwMVY3Ny4wMDFjMC04LjI5MS02LjUwOS0xNS0xNC44LTE1aC02MC4wMDFjLTguMjkxLDAtMTUsNi43MDktMTUsMTV2Mjg1LjAwM2gtNDUuMDAxICAgIGMtMTIuMzUzLDAtMTkuMzk2LDE0LjE1LTExLjk5NywyMy45OTRMMzM0LjAwNSw1MDZjNS45ODksOC4wMDYsMTguMDE0LDcuOTk0LDIzLjk5NCwwTDQ0OCwzODUuOTk5ICAgIEM0NTUuMzkxLDM3Ni4xNjUsNDQ4LjM2NSwzNjIuMDA1LDQzNi4wMDMsMzYyLjAwNXoiIGZpbGw9IiNlODczMGMiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+          </button>
+
+        <div class='form-group'>
+            <p class='title'>Moeda Pretendida</p>
+            <%= select_tag 'target_currency', options_for_select(currency_list, 'USD'), class: 'form-control', id: 'target_currency'%>
           </div>
         </div>
 
-        <div class='destination_currency'>
+        <div class='input_area'>
           <div class='form-group'>
-            <p class='title'>Moeda Pretendida</p>
-            <%= select_tag 'target_currency', options_for_select(currency_list, 'USD'), class: 'form-control', id: 'target_currency'%>
+            <p class='title'>Valor Moeda Local</p>
+            <input type='number' name='amount' id='amount' class='form-control' placeholder='Exemplo $10' step='any' required>
           </div>
           <div class='form-group'>
             <input type='text' id='result' name='result' class='form-control' placeholder='Resultado' readonly>

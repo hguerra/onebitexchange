@@ -11,7 +11,7 @@ module ExchangesHelper
 
   def self.crypto_list
     [
-      'BTC', 'ETH' 'XRP', 'LTC', 'BCH'
+      'BTC', 'ETH', 'XRP', 'LTC', 'BCH'
     ]
   end
 
